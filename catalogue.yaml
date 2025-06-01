@@ -44,6 +44,6 @@
   - name: starting catalogue
     ansible.builtin.service:
       name: catalogue
-      state: present
+      state: started
       enable: yes
   

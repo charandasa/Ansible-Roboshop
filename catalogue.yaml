@@ -23,7 +23,7 @@
       path: /app
       state: directory
   - name: getting the url
-    ansible.builtin.uri:
+    ansible.builtin.get_url:
       url: https://roboshop-artifacts.s3.amazonaws.com/catalogue-v3.zip
       dest: /tmp/catalogue.zip
   - name: extracting the code

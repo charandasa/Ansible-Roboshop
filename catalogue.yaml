@@ -31,3 +31,14 @@
       src: /tmp/catalogue.zip
       dest: /app
       remote_src: yes
+  - name: install dependencies
+    community.general.npm:
+      path: /app
+  - name: loading the service
+    ansible.builtin.systemd_service:
+    path: /catalogue.service
+  - name: starting catalogue
+    name: catalogue
+    state: present
+    enable: yes
+  
